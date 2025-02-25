@@ -1,0 +1,12 @@
+# ignore all files in data
+data/*
+
+# ignore .envrc and .direnv
+.envrc
+.direnv/
+
+# ignore __pycache__
+__pycache__/
+
+# ignore shell.nix
+shell.nix
