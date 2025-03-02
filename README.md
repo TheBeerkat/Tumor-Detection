@@ -10,7 +10,7 @@
 
 2. **Run the setup script:**
    ```bash
-   ./setup.sh
+   bash ./setup.sh
    ```
 
 3. **Run the application:**
