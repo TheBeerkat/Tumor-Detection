@@ -38,22 +38,23 @@ def load_inbreast_mask(mask_path, imshape=(4084, 3328)):
     return mask
 
 
-# Path to your .roi file
-mask_path = "your path"
+if __name__ == "__main__":
+    # Path to your .roi file
+    mask_path = "your path"
 
-# Image size of INbreast dataset
-imshape = (4084, 3328)
+    # Image size of INbreast dataset
+    imshape = (4084, 3328)
 
-# Load the mask
-mask = load_inbreast_mask(mask_path, imshape)
+    # Load the mask
+    mask = load_inbreast_mask(mask_path, imshape)
 
-# Verify mask contains non-zero values (indicating ROI regions were properly processed)
-print(f"Mask shape: {mask.shape}")
-print(f"Non-zero pixel count: {np.count_nonzero(mask)}")
+    # Verify mask contains non-zero values (indicating ROI regions were properly processed)
+    print(f"Mask shape: {mask.shape}")
+    print(f"Non-zero pixel count: {np.count_nonzero(mask)}")
 
-# Display the mask using matplotlib
-plt.figure(figsize=(10, 10))
-plt.imshow(mask, cmap="gray")
-plt.title("Loaded ROI Mask")
-plt.axis("off")
-plt.show()
+    # Display the mask using matplotlib
+    plt.figure(figsize=(10, 10))
+    plt.imshow(mask, cmap="gray")
+    plt.title("Loaded ROI Mask")
+    plt.axis("off")
+    plt.show()
