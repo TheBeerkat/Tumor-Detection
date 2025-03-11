@@ -8,5 +8,4 @@ pydicom
 pillow
 pypng
 tqdm
-plistlib
 scikit-image

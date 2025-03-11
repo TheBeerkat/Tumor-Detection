@@ -39,7 +39,7 @@ def load_inbreast_mask(mask_path, imshape=(4084, 3328)):
 
 
 if __name__ == "__main__":
-    # Path to your .roi file
+    # Path to your roi file
     mask_path = "your path"
 
     # Image size of INbreast dataset
