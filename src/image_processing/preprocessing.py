@@ -6,14 +6,14 @@ def create_preprocessing_pipeline(config: dict) -> List[Callable]:
     """Create processing pipeline based on config"""
     pipeline = []
     
-    if config.get("contrast_enhance", True):
-        pipeline.append(contrast_enhance)
-    
     if config.get("noise_reduction", True):
         pipeline.append(noise_reduction)
     
     if config.get("intensity_normalization", True):
         pipeline.append(intensity_normalization)
+        
+    if config.get("contrast_enhance", True):
+        pipeline.append(contrast_enhance)
         
     return pipeline
 
@@ -35,4 +35,4 @@ def intensity_normalization(image: np.ndarray) -> np.ndarray:
     mean = np.mean(image_float)
     std = np.std(image_float)
     normalized = (image_float - mean) / (std + 1e-8)
-    return np.uint8(255 * (normalized - normalized.min()) / (normalized.max() - normalized.min())) 
+    return np.uint8(255 * (normalized - normalized.min()) / (normalized.max() - normalized.min()))
